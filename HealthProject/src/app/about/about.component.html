@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 0;
+    }
+    .container{
+        font-family: 'Arial', sans-serif;
+        background-image: url("zdp10.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    .text-section {
+        flex: 1;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .text-section h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .text-section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    .image-section {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 57vh;
+        max-height: 70vh;
+        margin-top: 0px;
+    }
+
+    .image-container {
+        position: relative;
+        margin-right: 80px;
+    }
+
+    .image-section img {
+        width: 500px;
+        border-radius: 30px;
+        transition: 0.5s ease;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 30px;
+    }
+
+    .image-container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .images h3{
+        font-size: 35px;
+        font-family: 'Arial', sans-serif;
+        margin-bottom: 0px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .goal-section {
+        height: 50vh;
+        background-color: #E3FAE3;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: flex-start; 
+        text-align: center;
+        padding-top: 20px; 
+    }
+
+    .goal-title {
+        width: 100%;
+        margin-bottom: 50px; 
+    }
+
+    .goal-title h1 {
+        font-size: 2.5em;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .goal-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        width: 100%;
+        max-width: 1200px; 
+        margin-top: 40px; 
+    }
+
+    .goal-text {
+        width: 50%;
+        padding-right: 20px; 
+    }
+
+    .goal-text p {
+        font-family: 'Arial', sans-serif;
+        padding-right: 100px;
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    .goal-image {
+        width: 50%;
+        text-align: right;
+    }
+
+    .goal-image img {
+        border-radius: 50px;
+        width: 100%;
+        height: auto; 
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>По-добро бъдеще</h1>
+            <p>Ние сме ученици от 10-и клас, изучаващи специалностите електронна търговия и приложно програмиране. Занимаваме се със съвременни технологии и иновации в областта на електронната търговия и програмирането. Работим в екипи, за да разработим практически проекти, които се фокусират върху създаването на уебсайтове, мобилни приложения и софтуерни решения за бизнеса.</p>
+        </div>
+    </div>
+    <div class="images">
+        <h3>Нашите постижения</h3>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="zdp.jpg" alt="Image 1">
+                <div class="overlay">
+                    <div class="text">Text for Image 1</div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="zdp2.jpg" alt="Image 2">
+                <div class="overlay">
+                    <div class="text">Text for Image 2</div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="zdp3.jpg" alt="Image 3">
+                <div class="overlay">
+                    <div class="text">Text for Image 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="goal-section">
+        <div class="goal-title">
+            <h1>Нашата цел</h1>
+        </div>
+        <div class="goal-content">
+            <div class="goal-text">
+                <p>Нашата цел е да се запознаем с основните концепции на програмирането и да приложим уменията си в създаването на иновативни продукти за електронна търговия. Може да кажем, че сме готови да предизвикаме бъдещето с нашата страст към технологиите и непрекъснатото си учене.</p>
+            </div>
+            <div class="goal-image">
+                <img src="health.png" alt="Health Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
