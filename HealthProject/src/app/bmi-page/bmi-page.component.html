@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИТМ калкулатор</title>
+
+    <style>
+        .calculator-section{
+            height: 70vh;
+            background-color: #70aada;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            padding-right: 200px;
+        }
+        .calculator-section h3{
+            margin-top: 50px;
+            color: white;
+            font-size: 42px;
+            font-family: 'Century Gothic';
+            padding-left: 100px;
+        }
+        .height-input{
+            padding: 20px 58px;
+            border: none;
+            border-radius: 30px;
+            display: block;
+        }
+        .weight-input{
+            padding: 20px 58px;
+            border: none;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+        .calculator-section button{
+            border: none;
+            padding: 20px 30px;
+            background-color: rgb(214, 214, 214);
+            font-size: 20px;
+            cursor: pointer;
+            width: 300px;
+            margin-left: 370px;
+            margin-bottom: 270px;
+        }
+
+        .inputs{
+            padding-bottom: 100px;
+            padding-left: 100px;
+            margin-top: 100px;
+        }
+
+        .formula{
+            color: white;
+            font-size: 35px;
+            padding-left: 500px;
+            position: relative;
+            bottom: 190px;
+        }
+
+        .bmi-table{
+            height: 60vh;
+            background-color: #fffff2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table {
+            width: 45%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-right: 200px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #70aada;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e1f5fe;
+        }
+
+        .bmi-table-text{
+            width: 500px;
+            color: #4a84b4;
+            padding-left: 200px;
+        }
+
+        .bmi-table-text h3{
+            font-size: 42px;
+            font-family: 'Century Gothic';
+        }
+        .bmi-table-text p{
+            margin-top: 20px;
+            font-size: 18px;
+            font-family: 'Century Gothic';
+        }
+        tr{
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-section">
+        <h3>Калкулатор за  Индекс на Телесна Маса</h3>
+        <div class="inputs">
+            <input class="height-input" placeholder="Въведете височина">
+            <input class="weight-input" placeholder="Въведете тегло">
+        </div>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow class="formula">
+                <mi>ИТМ</mi>
+                <mo>=</mo>
+                <mfrac>
+                    <mrow>
+                        <mi>тегло</mi>
+                        <mo>&#xA0;</mo>
+                        <mo>(kg)</mo>
+                    </mrow>
+                    <mrow>
+                        <mi>височина</mi>
+                        <mo>&#xA0;</mo>
+                        <mo>(m)</mo>
+                        <msup><mo></mo><mn>2</mn></msup>
+                    </mrow>
+                </mfrac>
+            </mrow>
+        </math>
+        <button>Изчисли</button>
+    </div>
+    <div class="bmi-table">
+        <div class="bmi-table-text">
+            <h3>Таблица за показатели</h3>
+            <p>Таблицата с BMI категоризира индекса на телесна маса в шест диапазона: поднормено тегло, нормално тегло, наднормено тегло и три нива на затлъстяване. Всяка категория отразява набор от стойности на ИТМ и свързани рискове за здравето. Този инструмент помага да се преценят потенциалните опасения за здравето, въпреки че трябва да бъде допълнен от други оценки за пълна оценка.</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ИТМ Категория</th>
+                    <th>ИТМ Обхват (kg/m²)</th>
+                    <th>Здравен риск</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Поднормено тегло</td>
+                    <td>&lt; 18.5</td>
+                    <td>Повишен риск от хранителен дефицит и остеопороза</td>
+                </tr>
+                <tr>
+                    <td>Нормално тегло</td>
+                    <td>18.5 - 24.9</td>
+                    <td>Нисък риск (здравословен диапазон)</td>
+                </tr>
+                <tr>
+                    <td>Наднормено тегло</td>
+                    <td>25 - 29.9</td>
+                    <td>Повишен риск от сърдечно-съдови заболявания</td>
+                </tr>
+                <tr>
+                    <td>Затлъстяване клас I</td>
+                    <td>30 - 34.9</td>
+                    <td>Висок риск от сърдечно-съдови заболявания</td>
+                </tr>
+                <tr>
+                    <td>Затлъстяване клас II</td>
+                    <td>35 - 39.9</td>
+                    <td>Много висок риск от сърдечно-съдови заболявания</td>
+                </tr>
+                <tr>
+                    <td>Затлъстяване клас III</td>
+                    <td>≥ 40</td>
+                    <td>Изключително висок риск от сърдечно-съдови заболявания</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
