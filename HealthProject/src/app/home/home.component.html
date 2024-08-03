@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начална страница</title>
+    <style>
+        .introduction-section {
+            height: 65vh;
+            background-color: #004a4f;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: 'Century Gothic';
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            margin-left: 300px; 
+            padding-bottom: 200px;
+            line-height: 1.6;
+        }
+        .text-section h1, .text-section h2, .text-section h3 {
+            margin: 0;
+            position: relative;
+            display: inline-block;
+        }
+        .text-section h2 .underline, .text-section h3.underline {
+            display: inline-block;
+            position: relative;
+        }
+        .text-section h2 .underline::after, .text-section h3.underline::after {
+            content: '';
+            display: inline-block; 
+            width: 100%; 
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            bottom: -10px; 
+        }
+        .text-section h1 {
+            font-size: 5em;
+            font-weight: bold;
+            color: #00B140;
+        }
+        .text-section h2 {
+            font-size: 4em;
+            font-weight: bold;
+            color: #FF89C3;
+            margin-bottom: 20px; 
+        }
+        .text-section h3 {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #FFCD33;
+        }
+        .information-section {
+            max-width: 700px; 
+            padding-left: 200px; 
+            padding-bottom: 220px;
+        }
+        .information-section p {
+            font-weight: 700;
+            line-height: 1.6;
+            font-size: large;
+            margin: 0;
+            padding-bottom: 30px;
+            font-family: 'Helvetica', sans-serif;
+            color: rgb(231, 229, 229);
+            width: 500px;
+        }
+        .func-button {
+            background-color: #F3E7D3; 
+            color: #005750;
+            border: none;
+            padding: 16px 40px;
+            font-family: 'TT Commons', sans-serif; 
+            font-size: 18px;
+            border-radius: 4px; 
+            cursor: pointer;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .func-button:hover {
+            background-color: #E6D9C2;
+        }
+
+        .func-button::after {
+            content: ' →';
+            font-size: 18px;
+            margin-left: 8px;
+        }
+
+        .bmi-section {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            background-color: #f5e2c3;
+            color: #003d38;
+            font-family: 'Century Gothic';
+            padding: 0 20px;
+            box-sizing: border-box;
+            padding-top: 130px;
+            gap: 220px;
+        }
+        .bmi-text {
+            max-width: 500px;
+            padding-bottom: 150px;
+            padding-left: 300px;
+        }
+        .bmi-text h3 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .bmi-text p {
+            font-weight: 550;
+            font-size: 20px;
+        }
+        .bmi-section img {
+            width: 600px;
+            height: auto;
+            padding-bottom: 150px;
+        }
+        .bmi-button{
+            background-color: #005750; 
+            color: #F3E7D3;
+            border: none;
+            padding: 16px 40px;
+            font-family: 'TT Commons', sans-serif; 
+            font-size: 18px;
+            border-radius: 4px; 
+            cursor: pointer;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .bmi-button:hover {
+            background-color: #007c72;
+        }
+
+        .bmi-button::after {
+            content: ' →';
+            font-size: 18px;
+            margin-left: 8px;
+        }
+
+        .calories-section{
+            height: 60vh;
+            background-color: #E8B895;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Century Gothic';
+            padding: 0 20px;
+            box-sizing: border-box;
+            padding-top: 130px;
+            gap: 220px;
+        }
+        .calories-text {
+            max-width: 500px;
+            padding-bottom: 150px;
+        }
+        .calories-text h3 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .calories-text p {
+            font-weight: 550;
+            font-size: 20px;
+        }
+        .calories-section img {
+            width: 600px;
+            height: auto;
+            padding-bottom: 150px;
+            margin-left: 200px;
+        }
+        .calories-button{
+            background-color: #F3E7D3; 
+            color: #005750;
+            border: none;
+            padding: 16px 40px;
+            font-family: 'TT Commons', sans-serif; 
+            font-size: 18px;
+            border-radius: 4px; 
+            cursor: pointer;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .calories-button:hover {
+            background-color: #007c72;
+            color: #F3E7D3;
+        }
+
+        .calories-button::after {
+            content: ' →';
+            font-size: 18px;
+            margin-left: 8px;
+        }
+
+        .problems-section {
+            height: 60vh;
+            background-color: teal;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align items to the top */
+            font-family: 'Century Gothic';
+            padding: 0 20px;
+            box-sizing: border-box;
+            padding-top: 20px; /* Add some padding at the top */
+        }
+
+        .problems-section h3 {
+            font-size: 32px;
+            margin-bottom: 50px; /* Space below the heading */
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; /* Make the content take full width */
+            align-items: center; /* Align items to the top */
+            margin-top: 20px; /* Space below the heading */
+        }
+        .content a{
+            margin-left: 380px;
+            margin-top: 20px;
+        }
+        .problems-section p {
+            font-size: 20px;
+            width: 500px;
+            text-align: left;
+            font-weight: 550;
+            padding-left: 300px; 
+        }
+
+        .problems-section img {
+            height: 300px;
+            padding-right: 300px;
+        }
+
+        .problems-button {
+            background-color: #F3E7D3;
+            color: #005750;
+            border: none;
+            padding: 16px 40px;
+            font-family: 'TT Commons', sans-serif;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-top: 10px; 
+        }
+
+        .problems-button:hover {
+            background-color: #007c72;
+            color: #F3E7D3;
+        }
+
+        .problems-button::after {
+            content: ' →';
+            font-size: 18px;
+            margin-left: 8px;
+        }
+        .awards-section{
+            height: 50vh;
+            background-color: #fffff2;
+            color: #7da07d;
+            font-family: 'Century Gothic';
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .awards-section h3{
+            font-size: 32px;
+            padding-bottom: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="introduction-section">
+        <div class="text-section">
+            <h1>Специалисти</h1>
+            <h2><span>в </span><span class="underline">здравословното</span></h2>
+            <h3 class="underline">хранене</h3>
+        </div>
+        <div class="information-section">
+            <p>В днешната цифрова епоха електронения здравен портал за училищата изпъква като ключова инициатива, променяща начина, по който ученици, учители и медицински специалисти взаимодействат.</p>
+            <button class="func-button">Виж функционалности</button>
+        </div>
+    </div>
+    <div class="bmi-section">
+        <div class="bmi-text">
+            <h3>Индекс на телесна маса</h3>
+            <p>Проверете индекса на телесната си маса, за да получите ясна представа за здравето си. Поддържането на здравословно тегло е ключово за дълголетие и по-добро качество на живота. Вземете здравето си в свои ръце.</p>
+            <button class="bmi-button">Изчисли ИТМ</button>
+        </div>
+        <img src="bmi.jpg" alt="BMI Illustration">
+    </div>
+    <div class="calories-section">
+        <img src="bmi.jpg" alt="Calories Illustration">
+        <div class="calories-text">
+            <h3>Здравословно хранене</h3>
+            <p>
+                Здравословното хранене е ключ към енергия и жизненост. То укрепва имунната система, подобрява настроението и удължава живота. Избирайки балансирани храни, инвестираш в своето бъдеще и добро здраве. Малките стъпки днес водят до големи резултати утре. Бъди съзнателен към храната си и почувствай разликата!</p>
+            <a class="calories-button">Виж нашите препоръки</a>
+        </div>
+    </div>
+    <div class="problems-section">
+        <h3>Здравословни проблеми</h3>
+        <div class="content">
+            <div>
+                <p>При тинейджърите често се наблюдават здравословни проблеми като наднормено тегло, неправилно хранене и стрес. Хормоналните промени, несъществуваща физическа активност и нездравословни навици могат да доведат до дългосрочни последици. Подходящата диета и редовните упражнения са ключови за тяхното физическо и психично здраве.</p>
+                <a class="problems-button">Виж нашите препоръки</a>
+            </div>
+            <img src="problems.png" alt="Health Problems Illustration">
+        </div>
+    </div>
+    <div class="awards-section">
+        <h3>Нашите постижения</h3>
+    </div>
+</body>
+</html>

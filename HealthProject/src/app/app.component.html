@@ -11,13 +11,13 @@
       margin: 0px;
     }
     .nav-bar {
-      border: 1px lightgrey solid;
-      height: 100px;
+      height: 120px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 14px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0 20px;
+      background-color: #004a4f;
     }
     .logo img {
       max-height: 100px;
@@ -26,38 +26,24 @@
     }
     .nav-links {
       position: inherit;
-      right: 100px;
+      right: 500px;
       align-items: center;
       list-style: none;
       display: flex;
     }
     .nav-links li {
+      justify-content: center;
+      align-items: center;
       display: inline-block;
-      margin-right: 40px;
+      margin-right: 60px;
     }
     .nav-links a {
       text-decoration: none;
-      color: black;
-      font-size: 20px;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: white;
+      font-size: 18px;
+      font-family: 'Helvetica';
       position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 3px;
-      background: green;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -10px; /* Adjust this value to move the line lower */
-      left: 0;
-    }
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-    .nav-links a:hover {
-      color: green;
+      font-weight: bold;
     }
   </style>
 
@@ -68,7 +54,7 @@
     </div>
     <section>
       <ul class="nav-links">
-        <li><a href="youtube.com">Начало</a></li>
+        <li><a routerLink="/home-page" routerLinkActive="active" ariaCurrentWhenActive="page">Начало</a></li>
         <li><a routerLink="/about-page" routerLinkActive="active" ariaCurrentWhenActive="page">За нас</a></li>
         <li><a>Контакти</a></li>
         <li><a>Новини</a></li>
